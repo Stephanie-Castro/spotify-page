@@ -1,0 +1,277 @@
+/*
+*
+@author Stephanie de Castro Gonçalves
+@version 0.1
+*/
+
+/* ******************************* Layout ******************************* */
+
+
+
+/* Ajustando tanto as tags html e body e a classe '.capa' para ocuparem toda a altura da página exibida no navegador */
+html, body, .capa{
+	height: 100%;
+	overflow: auto; /* com 'overflow: auto' aplicado ao body o conteúdo será mostrado com uma barra de rolagem ou não
+						dependendo da tela de exibição (pequena, média, grande, ...) */
+}
+
+
+/*Estilizando a tag body para ficar parecida com a original do site*/
+body{
+	background: url(imagens/capa.png),
+				url(imagens/ruido.png),
+				linear-gradient(50deg,#ff4169,#7c26f8); /* Usamos 2 imagens mais um gradiente de duas cores com um ângulo de
+															50deg */
+	background-attachment: fixed; /* O background agora é fixo, o que significa que o resto rola no navegador, mas não o background. */
+	font-family: Helvetica, Arial, sans-serif;
+	overflow-x: hidden; /* 'overflow-x: hidden;' faz com que a barra de rolagem de baixo/horizontal suma. Essa barra estava
+							lá pois na classe '.rotacionar' é colocado também um padding que faz com que o conteúdo que essa classe
+							representa fica fora/além do que a tela do navegador mostra.
+							É interessante fazer um teste colocando 'overflow-y: hidden' que verá que a barra de rolagem
+							vertical irá sumir. */
+}
+
+
+/* -- Barra de Navegação -- */
+.img-logo{
+	height: 40px;
+	width: 132px;
+	display: block; /* Usamos 'display: block' porque essa classe está sendo usada em um 'span' que é um elemento inline,
+					mas queremos que o logo (a imagem do logo) seja um elemento do tipo block para podermos ajustar sua altura
+					e largura. Se o elemento que essa classe em questão foi aplicada não for do tipo block, 'height' e 'weight'
+					que foram definidos não serviriam de nada. */
+	background: url('imagens/spotify.svg') no-repeat; /* O formato de imagem '.svg' permite que sejam feitas imagens escaláveis, 
+											que melhor se adequem aos diversos dispositivos. */
+											/* O 'no-repeat' é para a imagem não repetir, uma vez que sem esse atributo, ela começará
+											a repetir ao lado */
+	background-size: contain; /* O background (que no caso é uma imagem) terá o tamanho definido por 'height' e 'weight'. */
+	color: transparent; /* No span que essa classe estiliza tem um texto escrito "Spotify". Screen Readers lêem esse texto,
+						por isso é importante deixá-lo lá, e também caso a imagem não carregue no navegador por qualquer motivo
+						que seja. Mas para que esse texto não fique aparecendo por cima da imagem, o definimos como transparente. */
+
+}
+
+
+/* Background preto da Barra de Navegação */
+.nav-bg-custom{
+	padding: 10px 0px;
+	background: rgba(0, 0, 0, 0.6); /* Os três primeiros 0 representam a cor preta e o 0.6 representa a transparência aplicada. */
+}
+
+.divisor{
+	width: 1px;
+	height: 17px;
+	background: white;
+	margin: 20px 10px;
+}
+
+
+.container{
+	padding: 0px 0px;
+}
+
+
+.nav-item{
+	padding: 10px 10px 5px 10px;	
+}
+
+
+.navbar-dark .navbar-nav .nav-link , footer .nav a{
+	color: white;
+}
+
+
+.navbar-dark .navbar-nav .nav-link:hover , footer .nav a:hover{
+	text-decoration: none; /* Tira o underline dos links que estava aparecendo no footer/rodapé */
+	color: #55DF22; /* É um tom de verde claro parecido com o do Spotify */
+}
+
+
+
+
+
+/* -- Capa -- */
+
+.capa{
+	display: table;
+	width: 100%;
+}
+
+
+.texto-capa{
+	color: white;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+
+
+/* -- Botões -- */
+
+/* Classe de customização geral dos botões */
+.btn-custom{
+	color: white;
+	border-radius: 500px;
+	-webkit-border-radius: 500px; /* Para ser compatível com todos os navegadores */
+	-moz-border-radius: 500px; /* Para ser compatível com todos os navegadores */
+	text-transform: uppercase; /* Texto dos botões é em letra maiúscula */
+	padding: 10px 35px;
+	transition: background 0.4s, color 0.4s; /* Tempo de transição das cores do background e do texto é de 0.4s caso exista
+												mudança de estado (no caso 'hover') */
+}
+
+/* Classe botão roxo */
+.btn-roxo{
+	background: #7c25f8;
+}
+/* Classe botão roxo:hover */
+.btn-roxo:hover{
+	background: #6207e3;
+	color: white;
+}
+
+
+/* Classe botão branco */
+.btn-branco{
+	border: 2px solid white;
+}
+/* Classe botão branco:hover */
+.btn-branco:hover{
+	background-color: white;
+	color: black;
+
+}
+
+
+/* Seção de Serviços */
+
+/* ID servicos que faz uma formatação básica da section/área de serviços apresentada */
+#servicos{
+	background-color: white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+
+/* formatação básica para a área de álbuns */
+.albuns{
+	padding: 10px 0px 10px 0px;
+}
+
+
+
+
+
+/* Seção de Recursos */
+
+/* ID recursos que faz uma formatação básica da section/área de recursos apresentada */
+#recursos{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: white;
+}
+
+
+/* Classe rotacionar */
+.rotacionar{
+	transform: rotate(30deg); /* Rotaciona em 30deg o conteúdo formatado por essa classe */
+	-webkit-transform: rotate(30deg); /* Para ser compatível com todos os navegadores */
+	-moz-transform: rotate(30deg); /* Para ser compatível com todos os navegadores */
+	padding-left: 80px;
+}
+
+
+
+/* Rodapé - formatação básica */
+footer{
+	background-color: #000;
+	padding: 50px 0px 20px 0px;
+	position: relative; /* Assim a tarja preta e todo o resto do conteúdo do rodapé fica a frente (ocultando
+							assim a imagem dos celulares, se tirar esse atributo as imagens dos celulares ficarão
+							por cima do rodapé) */
+}
+
+
+
+
+/* ******************************* Tipografia ******************************* */
+
+/* Alteração de todas as tags h1*/
+h1{
+	font-size: 100px;
+	font-weight: 900;
+	letter-spacing: -0.05em;
+	margin-bottom: 50px;
+}
+
+/* Alteração de todas as tags h2*/
+h2{
+	font-size: 50px;
+	font-weight: 700;
+	letter-spacing: -0.04em;
+}
+
+/* Alteração de todas as tags h3*/
+h3{
+	font-size: 35px;
+	font-weight: 700;
+	letter-spacing: -0.04em;
+}
+
+
+
+#servicos h2, #servicos h3{
+	color: #7c25f8;
+}
+
+
+#recursos h3{
+	color: #9bf0e1;
+}
+
+
+#rodape h4{
+	color: #919496;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+
+
+
+
+/* Media Queries */
+
+/* xs < 768 */
+@media screen and (max-width: 767px){
+	h1 {
+		font-size: 50px; /* O tamanho da fonte da letra vai aumentando a medida que o tamanho da tela aumenta */
+	}
+
+	.btn-custom {
+		margin: 10px 15px; /* Quando a tela for muito pequena um botão vai ficar me cima do outra por isso
+							precisa de uma margem (espaçamento externo) */
+	}
+}
+
+/* sm  */
+@media screen and (min-width: 767px){
+	h1 {
+		font-size: 70px;
+	}
+}
+
+/* md  */
+@media screen and (min-width: 992px){
+	h1 {
+		font-size: 80px;
+	}
+}
+
+/* lg  */
+@media screen and (min-width: 1200px){
+	h1 {
+		font-size: 100px;
+	}
+}

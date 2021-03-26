@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Música para todos - Spotify</title>
+    <link rel="icon" href="imagens/favicon.png"> <!-- ícone que aparece no topo da aba do navegador. 'favicon' é um nome padrão para
+                                                      esse ícone. Pode procurar 'favicon generator' no Google
+                                                      para gerar um favicon. -->
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="estilo.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <!-- Nav -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark nav-bg-custom">
+      <div class="container"> 
+        <a href="index.html" class="navbar-brand">
+          <span class="img-logo">Spotify</span>
+        </a>
+
+        <!-- Botão Toggle -->
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#barra-navegacao">
+          <span class="sr-only">Alternar Navegação</span> <!-- Esse span é para aumentar a acessibilidade. A classe 'sr-only'
+                                                              é para Screen Readers -->
+          <span class="navbar-toggler-icon"></span> <!-- A classe 'navbar-toggler-icon' faz o ícone da barra de navegação diminuída
+                                                        aparecer quando a tela do navegador é/está pequena. -->
+        </button>
+
+        <div class="collapse navbar-collapse" id="barra-navegacao">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="" class="nav-link">Premium</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link">Ajuda</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link">Baixar</a>
+            </li>
+            <li class="divisor" role="separator"></li>
+            <li class="nav-item">
+              <a href="" class="nav-link">Inscrever-se</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link">Entrar</a>
+            </li>
+          </ul>
+        </div>
+
+      </div> <!-- End container-->   
+    </nav> <!-- End nav -->
+
+
+    <div class="capa">
+      <div class="texto-capa">
+        <h1>Música para todos</h1>
+        <a href="" class="btn btn-custom btn-roxo btn-lg">Aproveite o Spotify Free</a>
+        <a href="" class="btn btn-custom btn-branco btn-lg">Obter Spotify Premium</a>
+      </div>
+    </div>
+
+
+
+    <!-- Conteúdos -->
+    <section id="servicos">
+      <div class="container">
+        <div class="row">
+
+          <!-- Álbuns -->
+          <div class="col-md-6"> <!-- A área que terá as capas dos álbuns ocupará metade do espaço
+                                      disponível da section (6/12) -->
+            <div class="row albuns"> <!-- row --> 
+              
+              <div class="col-md-6"> <!-- Do espaço reservado para os álbuns, cada álbum ocupará metade desse espaço -->
+                <img src="imagens/img1.jpg" class="img-fluid"> <!-- imagem de capa do álbum. A classe 'img-fluid' faz com
+                                                                    que a imagem se ajuste automaticamente ao tamanho disponível -->
+              </div>
+              <div class="col-md-6">
+                <img src="imagens/img2.jpg" class="img-fluid">
+              </div>
+            </div> <!-- /row -->
+
+            <div class="row albuns"> <!-- row -->  <!-- Outra linha de álbuns-->             
+              <div class="col-md-6">
+                <img src="imagens/img3.jpg" class="img-fluid">
+              </div>
+              <div class="col-md-6">
+                <img src="imagens/img4.jpg" class="img-fluid">
+              </div>
+            </div> <!-- /row -->
+
+          </div>
+
+          <!-- Serviços -->
+          <div class="col-md-6"> <!-- A área que com as infromações de serviços ocupará a outra metade do espaço
+                                      disponível da section (6/12) -->
+
+            <h2>O que o Spotify tem?</h2>
+
+            <h3>Músicas</h3>
+            <p>
+              O Spotify tem milhões de músicas. Escure seus sons favoritos, descubra novas músicas e reúna seus favoritos em um só lugar
+            </p>
+
+            <h3>Playlists</h3>
+            <p>
+              No Spotify você encontra uma playlist para cada momento. Todas feitas por fanáticos especialistas de música.
+            </p>
+
+            <h3>Novos lançamentos</h3>
+            <p>
+              Escute os novos lançamentos de singles e álbuns da semana e veja o que está bombando no top 50.
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Recursos -->
+    <section id="recursos">
+      <div class="container">
+        <div class="row">
+
+          <!-- Informações -->
+          <div class="col-md-4">
+
+            <h2>Fácil</h2>
+
+            <h3>Buscar</h3>
+            <p>
+              Já sabe o que quer escutar? é só procurar e apertar o play.
+            </p>
+
+            <h3>Navegar</h3>
+            <p>
+              Vea os novos lançamentos, o que está bombando nas paradas e as melhores playlists para o seu momento.
+            </p>
+
+            <h3>Descobrir</h3>
+            <p>
+              Curta músicas ovas toda segunda-feira com uma playlist personalizada pra você. Ou relaxe e curta uma das rádios.
+            </p>
+
+          </div>
+
+      
+          <div class="col-md-8">
+            
+            <div class="row rotacionar"> <!-- row --> <!-- Todo o conteúdo dessa linha sofrerá uma rotação espcificada
+                                                            na classe 'rotacionar' que está em 'estilo.css' -->
+              
+              <div class="col-md-6">
+                <img src="imagens/iphone1.png" class="img-fluid">
+              </div>
+              <div class="col-md-6">
+                <img src="imagens/iphone2.png" class="img-fluid">
+              </div>
+
+            </div> <!-- /row -->
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+
+  <!-- Rodapé -->
+  <footer id="rodape">
+    <div class="container">
+      
+      <div class="row"> <!-- row -->
+
+        <div class="col-md-2">
+          <span class="img-logo">Spotify</span>
+        </div>
+
+        <div class="col-md-2">
+          <h4>Company</h4>
+          <ul class="nav flex-column"> <!-- 'flex-column' transforma os elementos em coluna -->
+            <li class="nav-item"><a href="#">Sobre</a></li>
+            <li class="nav-item"><a href="#">Empregos</a></li>
+            <li class="nav-item"><a href="#">Imprensa</a></li>
+            <li class="nav-item"><a href="#">Novidades</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-2">
+          <h4>Comunidades</h4>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a href="#">Artistas</a></li>
+            <li class="nav-item"><a href="#">Desenvolvedores</a></li>
+            <li class="nav-item"><a href="#">Marcas</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-2">
+          <h4>Links úteis</h4>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a href="#">Ajuda</a></li>
+            <li class="nav-item"><a href="#">Presentes</a></li>
+            <li class="nav-item"><a href="#">Player da web</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <ul class="nav">
+            <li class="nav-item"><a href="#" class="nav-link"><img src="imagens/facebook.png"></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><img src="imagens/twitter.png"></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><img src="imagens/instagram.png"></a></li>
+          </ul>
+        </div>
+
+
+      </div> <!-- /row -->
+
+    </div> <!-- /container -->
+  </footer>
+
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
